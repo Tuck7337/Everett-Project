@@ -4,7 +4,7 @@ Description: template which builds VPC, supporting resources, a basic networking
 
 Parameters:
   VPCCIDR:
-    Description: CIDR Block for VPC @@@@CHANGE
+    Description: CIDR Block for VPC
     Type: String
     Default: 10.0.0.0/16
     AllowedValues:
