@@ -1,6 +1,6 @@
 AWSTemplateFormatVersion: 2010-09-09
 
-Description: Project 2 template which builds VPC, supporting resources, a basic networking structure, and some Security groups for use in later tasks.
+Description: template which builds VPC, supporting resources, a basic networking structure, and some Security groups for use in later tasks.
 
 Parameters:
   VPCCIDR:
