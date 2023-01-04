@@ -4,7 +4,7 @@ Description: Project 2 template which builds VPC, supporting resources, a basic 
 
 Parameters:
   VPCCIDR:
-    Description: CIDR Block for VPC
+    Description: CIDR Block for VPC @@@@CHANGE
     Type: String
     Default: 10.0.0.0/16
     AllowedValues:
