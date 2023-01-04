@@ -109,7 +109,7 @@ Resources:
   PublicSubnet1:
     Type: 'AWS::EC2::Subnet'
     Properties:
-      VpcId: !Ref LabVPC
+      VpcId: !Ref Tuck2VPC
       CidrBlock: !Ref PublicSubnet1Param
       MapPublicIpOnLaunch: True
       AvailabilityZone: !Select
