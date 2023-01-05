@@ -274,7 +274,7 @@ Resources:
     Type: 'AWS::EC2::SecurityGroup'
     Properties:
       GroupDescription: Security Group allowing HTTP traffic for lab instances
-      VpcId: !Ref LabVPC
+      VpcId: !Ref EverettVPC
       Tags:
         - Key: Name
           Value: AppInstanceSecurityGroup
@@ -288,7 +288,7 @@ Resources:
     Type: 'AWS::EC2::SecurityGroup'
     Properties:
       GroupDescription: Security Group allowing RDS instances to have internet traffic
-      VpcId: !Ref VPC
+      VpcId: !Ref EverettVPC
       Tags:
         - Key: Name
           Value: RDSSecurityGroup
