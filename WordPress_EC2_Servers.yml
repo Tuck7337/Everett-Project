@@ -127,7 +127,7 @@ Resources:
           ToPort: 80
           SourceSecurityGroupId: !ImportValue AppInstanceSecurityGroupID
       VpcId:
-        !ImportValue VPCID
+        !ImportValue EverettVPCID
 
 # Lab Launch Template
 

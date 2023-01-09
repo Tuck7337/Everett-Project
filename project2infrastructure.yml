@@ -360,7 +360,7 @@ Outputs:
     Export:
       Name: "RDSSecurityGroupID"
 
-  VPCID:
+  EverettVPCID:
     Description: "The VPC ID for Everett Enterprises"
     Value: !Ref EverettVPC
     Export:
