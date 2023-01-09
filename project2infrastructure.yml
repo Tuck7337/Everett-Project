@@ -364,4 +364,4 @@ Outputs:
     Description: "The VPC ID for Everett Enterprises"
     Value: !Ref EverettVPC
     Export:
-      Name: "VPCID"
+      Name: "EverettVPCID"
