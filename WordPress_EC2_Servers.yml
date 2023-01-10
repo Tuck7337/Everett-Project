@@ -50,7 +50,7 @@ Parameters:
     AllowedPattern: ^([a-zA-Z0-9]*)$
     Description: The Amazon RDS database name.
     Type: String
-    Default: WPDatabase
+    Default: TT-Database
 
   DatabaseHostName:
     Description: Amazon RDS DB Endpoint
