@@ -73,7 +73,7 @@ Parameters:
     MinLength: 6
     NoEcho: true
     Type: String
-    Default: admin123
+    Default: Password1
 
   Username:
     AllowedPattern: ^([a-zA-Z0-9]*)$
@@ -92,7 +92,7 @@ Parameters:
     MinLength: 6
     NoEcho: true
     Type: String
-    Default: wpadmin123
+    Default: wpadminPassword1
 
   Email:
     Type: String
