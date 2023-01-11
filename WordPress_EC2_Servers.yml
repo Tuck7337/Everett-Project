@@ -134,7 +134,7 @@ Resources:
   WordPressLaunchTemplate:
     Type: AWS::EC2::LaunchTemplate
     Properties:
-      LaunchTemplateName: WordPressLaunchTemplate
+      LaunchTemplateName: TTSoakerLaunchTemplate
       LaunchTemplateData:
         UserData:
           "Fn::Base64":
