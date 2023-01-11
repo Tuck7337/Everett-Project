@@ -50,7 +50,7 @@ Parameters:
     AllowedPattern: ^([a-zA-Z0-9]*)$
     Description: The Amazon RDS database name.
     Type: String
-    Default: WPDatabase
+    Default: TTDatabase
 
   DatabaseHostName:
     Description: Amazon RDS DB Endpoint
@@ -73,7 +73,7 @@ Parameters:
     MinLength: 6
     NoEcho: true
     Type: String
-    Default: admin123
+    Default: Password1
 
   Username:
     AllowedPattern: ^([a-zA-Z0-9]*)$
@@ -92,7 +92,7 @@ Parameters:
     MinLength: 6
     NoEcho: true
     Type: String
-    Default: wpadmin123
+    Default: wpadminPassword1
 
   Email:
     Type: String
@@ -101,10 +101,10 @@ Parameters:
   EC2ServerInstanceType:
     Description: Amazon EC2 Instance Type
     Type: String
-    Default: t3.medium
+    Default: t3.micro
     AllowedValues:
       - t3.small
-      - t3.medium
+      - t3.micro
       
   ALBDnsName:
     Description: Application Load Balancer DNS.
@@ -127,14 +127,14 @@ Resources:
           ToPort: 80
           SourceSecurityGroupId: !ImportValue AppInstanceSecurityGroupID
       VpcId:
-        !ImportValue VPCID
+        !ImportValue EverettVPCID
 
 # Lab Launch Template
 
-  LabLaunchTemplate:
+  WordPressLaunchTemplate:
     Type: AWS::EC2::LaunchTemplate
     Properties:
-      LaunchTemplateName: LabLaunchTemplate
+      LaunchTemplateName: WordPressLaunchTemplate
       LaunchTemplateData:
         UserData:
           "Fn::Base64":
@@ -232,4 +232,4 @@ Outputs:
   WPLaunchTemplate:
     Description: 'Launch Template for WordPress'
     Value:
-      !Ref LabLaunchTemplate
+      !Ref WordPressLaunchTemplate

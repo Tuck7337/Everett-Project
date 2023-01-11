@@ -274,7 +274,7 @@ Resources:
     Type: 'AWS::EC2::SecurityGroup'
     Properties:
       GroupDescription: Security Group allowing HTTP traffic for lab instances
-      VpcId: !Ref LabVPC
+      VpcId: !Ref EverettVPC
       Tags:
         - Key: Name
           Value: AppInstanceSecurityGroup
@@ -288,7 +288,7 @@ Resources:
     Type: 'AWS::EC2::SecurityGroup'
     Properties:
       GroupDescription: Security Group allowing RDS instances to have internet traffic
-      VpcId: !Ref VPC
+      VpcId: !Ref EverettVPC
       Tags:
         - Key: Name
           Value: RDSSecurityGroup
@@ -319,7 +319,7 @@ Resources:
 Outputs:
 
   Region:
-    Description: "Lab Region"
+    Description: "Project 2 Region"
     Value: !Ref AWS::Region
     
   DatabaseSubnet1CIDR:
@@ -343,25 +343,25 @@ Outputs:
       Name: "DatabaseSubnet2ID"
 
   AppInstanceSecurityGroupID:
-    Description: "The Security Group ID for the Lab Instance Security Group"
+    Description: "The Security Group ID for App Instance Security Group"
     Value: !Ref AppInstanceSecurityGroup
     Export:
       Name: "AppInstanceSecurityGroupID"
 
   EFSMountTargetSecurityGroupID:
-    Description: "The Security Group ID for the Lab EFS Mount Target"
+    Description: "The Security Group ID for the EFS Mount Target"
     Value: !Ref EFSMountTargetSecurityGroup
     Export:
       Name: "EFSMountTargetSecurityGroupID"
 
   RDSSecurityGroupID:
-    Description: "The Security Group ID for the Lab RDS cluster"
+    Description: "The Security Group ID for Everetts RDS cluster"
     Value: !Ref RDSSecurityGroup
     Export:
       Name: "RDSSecurityGroupID"
 
-  VPCID:
-    Description: "The VPC ID for the lab"
-    Value: !Ref LabVPC
+  EverettVPCID:
+    Description: "The VPC ID for Everett Enterprises"
+    Value: !Ref EverettVPC
     Export:
-      Name: "VPCID"
+      Name: "EverettVPCID"
